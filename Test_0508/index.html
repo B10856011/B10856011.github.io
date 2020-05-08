@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>澳洲牛點餐價格表</title>
+    <style>
+        h1,
+        h2 {
+            font-weight: bolder;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 36px;
+            color: red;
+        }
+        
+        h2 {
+            font-size: 28px;
+            color: blue;
+        }
+        
+        table {
+            margin: auto;
+        }
+        
+        #tableCaption {
+            border-style: dashed;
+            border-width: 1px;
+        }
+        
+        td {
+            height: 10px;
+        }
+        
+        .content {
+            color: green;
+            font-family: Arial;
+            font-size: 18px;
+            text-align: center;
+            border-style: dotted;
+            border-width: 1px;
+            border-color: red;
+        }
+        
+        .contentRed {
+            color: red;
+            font-family: Arial;
+            font-size: 18px;
+            text-align: center;
+            border-style: dotted;
+            border-width: 1px;
+            border-color: red;
+        }
+        
+        .tableTitle {
+            font-weight: bolder;
+            font-size: 18px;
+            color: purple;
+            text-align: center;
+            border-style: dotted;
+            border-width: 1px;
+            border-color: purple;
+        }
+    </style>
+    <script>
+        var k, n, m, mix;
+        var tai = [0, 50, 100, 150, 200, 250];
+
+        document.write("<table id='tableCaption'><thead>");
+        document.write("<h1>澳洲牛點餐價格表</h1>");
+        document.write("<h2>折扣內容：滿300的倍數打8折</h2></thead>");
+        document.write("<tbody><tr><td></td>");
+        document.write("<td class='tableTitle'>套餐一<br>50元</td>");
+        document.write("<td class='tableTitle'>套餐二<br>100元</td>");
+        document.write("<td class='tableTitle'>套餐三<br>150元</td>");
+        document.write("<td class='tableTitle'>套餐四<br>200元</td>");
+        document.write("<td class='tableTitle'>套餐五<br>250元</td></tr>");
+        for (n = 1; n <= 7; n++) {
+            document.write("<tr><td class='tableTitle'>" + n + "</td>");
+            for (m = 1; m <= 5; m++) {
+                mix = tai[m] * n;
+                if (mix % 300 == 0) {
+                    document.write("<td class='contentRed'>原價：" + mix + "<br>");
+                    mix = mix * 0.8;
+                    document.write(mix + "</td>");
+                } else {
+                    document.write("<td class='content'>" + mix + "</td>");
+                }
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
