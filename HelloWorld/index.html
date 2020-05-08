@@ -1,26 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>科科快餐點餐價格表</title>
-    <!--答案1-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIS快餐點餐價格表</title>
+
     <style>
+        table {
+            margin: auto;
+        }
+        
         h1 {
             font-size: 36px;
             font-weight: bolder;
             color: blue;
             text-align: center;
-        }
-        
-        table {
-            margin: auto;
-        }
-        
-        #tableCaption {
-            border-style: dashed;
-            border-width: 1px;
         }
         
         td {
@@ -29,31 +24,48 @@
             padding: 10px;
             color: green;
         }
-        /* //答案 2D*/
+        
+        .tableTitle {
+            border: dotted 1px purple;
+            color: purple;
+            font-weight: bolder;
+            font-size: 18px;
+            text-align: center
+        }
         
         .content {
+            border: dotted 1px green;
             color: green;
             font-family: Arial;
             font-size: 18px;
         }
-        
-        #tableTitle {
-            font-weight: bolder;
-            font-size: 18px;
-            color: purple;
-            text-align: center
-        }
     </style>
     <script>
+        var k, n, m, mix;
+        var tai = [0, 8, 11, 14, 17, 20];
+
+        document.write("<table><thead>");
+        document.write("<h1>MIS快餐點餐價格表</h1></thead>");
+        document.write("<tbody><tr><td></td>");
+        document.write("<td class='tableTitle'>套餐5<br>8元</td>");
+        document.write("<td class='tableTitle'>套餐4<br>11元</td>");
+        document.write("<td class='tableTitle'>套餐3<br>14元</td>");
+        document.write("<td class='tableTitle'>套餐2<br>17元</td>");
+        document.write("<td class='tableTitle'>套餐1<br>20元</td></tr>");
+        for (n = 3; n <= 7; n++) {
+            document.write("<tr><td class='tableTitle'>" + n + "</td>");
+            for (m = 1; m <= 5; m++) {
+                mix = tai[m] * n;
+                document.write("<td class='content'>" + tai[m] + "*" + n + "=" + mix + "</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
     </script>
 </head>
 
 <body>
-    <h1>科科快餐點餐價格表</h1>
 
-    <table>
-        <tr></tr>
-    </table>
 </body>
 
 </html>
