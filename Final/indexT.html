@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>樂團推薦</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .header {
+            height: 50px;
+            background-color: #000;
+            position: relative;
+        }
+        
+        .btn {
+            width: 40px;
+            height: 40px;
+            background-color: #000;
+            display: block;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+        }
+        
+        .btn span {
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            display: block;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            left: 2px;
+            width: 36px;
+            background-color: #aaa;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            box-shadow: 0px 8px 0px #aaa, 0px -8px 0px #aaa;
+        }
+        
+        nav {
+            width: 40%;
+            height: 100vh;
+            background-color: #282923;
+            position: absolute;
+            top: 50px;
+            left: -100%;
+        }
+        
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: #a6e22e;
+            padding: 10px 20px;
+            border-bottom: 1px solid #a6e22e;
+        }
+        
+        #menu {
+            position: absolute;
+        }
+        
+        #menu:checked~.header nav {
+            left: 0;
+        }
+        
+        img {
+            vertical-align: bottom;
+        }
+        
+        .bg img {
+            width: 100%;
+        }
+        
+        .title {
+            margin: 0 0 10px;
+            padding: 10px 20px;
+            background-color: #ccc;
+        }
+        
+        .title h2 {
+            font-size: 35px;
+            text-align: center;
+        }
+        
+        .item {
+            margin: 0 10px 20px;
+        }
+        
+        .item .text h3 {
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .item .text p {
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        .item .pic img {
+            width: 50%;
+            display: block;
+            margin: auto;
+        }
+        
+        .two {
+            margin: 60px 0;
+            background-color: #ffa;
+        }
+        
+        .footer {
+            background-color: #333;
+            color: #aaa;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        @media screen and (min-width:768px) {
+            .btn {
+                display: none;
+            }
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            nav {
+                position: relative;
+                left: 0;
+                display: flex;
+                width: auto;
+                height: auto;
+                top: 0;
+                background-color: transparent;
+            }
+            nav a {
+                border-bottom: none;
+            }
+            .item-group {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" name="" id="menu">
+
+    <div class="header">
+        <h1 class="logo">
+            <a href="https://B10856011.github.io/Final/index.html"><img src="https://picsum.photos/60/40?random=1">
+        </h1>
+        <label for="menu" class="btn"> 
+            <span>選單</span>
+        </label>
+        <nav>
+            <a href="https://B10856011.github.io/Final/index.html">關於我們</a>
+            <a href="https://B10856011.github.io/Final/indexP.html">單人推薦</a>
+        </nav>
+    </div>
+    <div class="mido">
+        <div class="bg">
+            <img src="https://images.pexels.com/photos/210900/pexels-photo-210900.jpeg?cs=srgb&dl=pexels-210900.jpg&fm=jpg">
+        </div>
+        <div class="title">
+            <h2>推薦名單</h2>
+        </div>
+        <div class="four">
+            <div class="item">
+                <div class="pic">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Yorushika_Logo.jpg">
+                </div>
+                <div class="text">
+                    <h3>ヨルシカ ( yorushika )</h3>
+                    <p>該樂團於2017年建成，樂隊出道時所屬的音樂廠牌為Dwango 旗下的 U&R records。2019年6月 14日以單曲「《心上破了洞》（『心に穴が空いた』）」在日本環球音樂旗下亮相。</p>
+                    <p>是由以往主要製作Vocaloid曲為主的n-buna和參與歌手Suis在2017年組成的樂隊。</p>
+                    <p>因為「不希望為音樂帶來先入為主的偏見」，所以關於這兩人的官方消息除上述外別無其他，至今仍未公布兩人的樣貌等相關資料。</p>
+                    <p>「Yorushika」（夜しか）這個名字取自於第一張迷你專輯《夏草使人厭煩》中最後一首歌《雲和幽靈》的歌詞：只有夜晚才能入眠（夜しかもう眠れずに）。</p>
+                    <p>N-buna 自己認為「確切地來說Yorushika和一般的樂隊不太一樣」，在樂隊性質的基礎上，可以說「Yorushika」本身就是一件作品。作為Vocaloid創作者的n-buna創建這個樂隊的期望之一，是為了表現有別於機器音源的人類聲音的特色。</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            &copy; B10856011_2020-6
+        </div>
+</body>
+
+</html>
