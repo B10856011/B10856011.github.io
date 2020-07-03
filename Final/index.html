@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於我們</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .header {
+            height: 50px;
+            background-color: #000;
+            position: relative;
+        }
+        
+        .btn {
+            width: 40px;
+            height: 40px;
+            background-color: #000;
+            display: block;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+        }
+        
+        .btn span {
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            display: block;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            left: 2px;
+            width: 36px;
+            background-color: #aaa;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            box-shadow: 0px 8px 0px #aaa, 0px -8px 0px #aaa;
+        }
+        
+        nav {
+            width: 40%;
+            height: 100vh;
+            background-color: #282923;
+            position: absolute;
+            top: 50px;
+            left: -100%;
+        }
+        
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: #a6e22e;
+            padding: 10px 20px;
+            border-bottom: 1px solid #a6e22e;
+        }
+        
+        #menu {
+            position: absolute;
+        }
+        
+        #menu:checked~.header nav {
+            left: 0;
+        }
+        
+        img {
+            vertical-align: bottom;
+        }
+        
+        .bg img {
+            width: 100%;
+        }
+        
+        .title {
+            margin: 0 0 10px;
+            padding: 10px 20px;
+            background-color: #ccc;
+        }
+        
+        .title h2 {
+            font-size: 35px;
+            text-align: center;
+        }
+        
+        .item {
+            margin: 0 10px 20px;
+        }
+        
+        .item .text h3 {
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .item .pic img {
+            width: 100%;
+        }
+        
+        .two {
+            margin: 60px 0;
+            background-color: #ffa;
+        }
+        
+        .footer {
+            background-color: #333;
+            color: #aaa;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        @media screen and (min-width:768px) {
+            .btn {
+                display: none;
+            }
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            nav {
+                position: relative;
+                left: 0;
+                display: flex;
+                width: auto;
+                height: auto;
+                top: 0;
+                background-color: transparent;
+            }
+            nav a {
+                border-bottom: none;
+            }
+            .item-group {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" name="" id="menu">
+
+    <div class="header">
+        <h1 class="logo">
+            <a href="https://B10856011.github.io/Final/index.html"><img src="https://picsum.photos/60/40?random=1">
+        </h1>
+        <label for="menu" class="btn"> 
+            <span>選單</span>
+        </label>
+        <nav>
+            <a href="https://B10856011.github.io/Final/indexT.html">樂團推薦</a>
+            <a href="https://B10856011.github.io/Final/indexP.html">單人推薦</a>
+        </nav>
+    </div>
+    <div class="mido">
+        <div class="bg">
+            <img src="https://images.pexels.com/photos/210900/pexels-photo-210900.jpeg?cs=srgb&dl=pexels-210900.jpg&fm=jpg">
+        </div>
+        <div class="title">
+            <h2>關於我們</h2>
+        </div>
+        <div class="item-group">
+            <div class="item">
+                <div class="pic">
+                    <a href="https://B10856011.github.io/Final/indexT.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQZ7KYs1fqzSykQ4m0YWQshlze5hdT0TWtyVA&usqp=CAU"></a>
+                </div>
+                <div class="text">
+                    <h3>樂團推薦</h3>
+                    <p>樂團推薦會將介紹的重點集中在一個樂團上，並不會將樂團成員逐一介紹，只會稍微帶過。</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="pic">
+                    <a href="https://B10856011.github.io/Final/indexP.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS79zRJzmo_MS4bsqgqqjiQdmHrbsdT5N7myw&usqp=CAU"></a>
+                </div>
+                <div class="text">
+                    <h3>單人推薦</h3>
+                    <p>單人推薦會將介紹的重點集中在一個人上，細講比較擅長的領域，和製作過的作品。</p>
+                </div>
+            </div>
+        </div>
+        <div class="two">
+            <div class="item">
+                <div class="pic">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTN3X2VHBkakd3QUKTbSbreHCzmuBbAXMiMDQ&usqp=CAU">
+                </div>
+                <div class="text">
+                    <h3>理由</h3>
+                    <p>為什麼我想做這個網站的理由就是因為有些創作者可能因為一些原因導致你可能根本沒聽說過他們，所以這個推薦網站大多都會推薦外國的樂團和創作者。還請各位請多指教。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; B10856011_2020-6
+    </div>
+</body>
+
+</html>
